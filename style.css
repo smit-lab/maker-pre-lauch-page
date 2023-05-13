@@ -1,0 +1,579 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+
+:root {
+  --light-blue: hsl(179 80% 58%);
+  --white: hsl(0 0% 100%);
+  --white-opacity: hsla(0, 0%, 100%, 0.6);
+  --dark-blue: hsl(206 84% 22%);
+  --very-dark-blue: hsl(230 60% 8%);
+  --gray: hsl(225 14% 53%);
+  --pink-error: hsl(343 100% 58%);
+  --fz-para: 0.9375rem;
+  --lh-para: 1.67;
+  --fw-para: 500;
+  --fz-heading-m: 1.125rem;
+  --lh-heading-m: 1.39;
+  --fw-heading-m: 800;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  font-family: "Manrope", sans-serif;
+  min-height: 100%;
+  text-rendering: optimizeSpeed;
+  line-height: 1;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.features-container,
+.price-container,
+.footer-container {
+  max-width: 20.4375rem;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 2.5rem 0 4.09375rem;
+  display: grid;
+  justify-content: center;
+}
+
+.hero {
+  overflow-x: hidden;
+  margin-bottom: 9rem;
+}
+
+.hero__img {
+  width: 408.55px;
+}
+
+.hero__txt {
+  margin-top: 2.96875rem;
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+}
+
+.hero__heading {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.647887323943662rem + 1.5023474178403755vw, 3rem);
+  line-height: 1.25;
+  margin-bottom: 1.4375rem;
+}
+
+.hero__heading span {
+  color: var(--light-blue);
+}
+
+.hero__para {
+  margin-bottom: 2rem;
+}
+
+.hero__para,
+.feature__para,
+.price__main-para,
+.price-box__para,
+.price-benefits {
+  font-size: var(--fz-para);
+  font-weight: var(--fw-para);
+  line-height: var(--lh-para);
+  color: var(--gray);
+}
+
+.features-container {
+  display: grid;
+  gap: 3.5rem;
+  margin-bottom: 9rem;
+}
+
+.feature-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.feature__img-box {
+  min-width: 120px;
+  min-height: 124px;
+  background-color: var(--dark-blue);
+  display: grid;
+  place-items: center;
+  border-radius: 2.8125rem;
+}
+
+.feature-img--passion {
+  width: 50%;
+}
+.feature-img--freedom {
+  width: 48%;
+}
+.feature-img--lifestyle {
+  width: 52%;
+}
+.feature-img--work {
+  width: 65%;
+}
+
+.feature__heading {
+  font-size: var(--fz-heading-m);
+  font-weight: var(--fw-heading-m);
+  line-height: var(--lh-heading-m);
+  margin-bottom: 0.6875rem;
+}
+.price-container {
+  margin-bottom: 9rem;
+}
+
+.price-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 4.0625rem;
+  align-items: center;
+}
+
+.price__txt {
+  text-align: center;
+  margin-bottom: 4.9375rem;
+}
+
+.price__main-heading {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.323943661971831rem + 0.7511737089201878vw, 2rem);
+  font-weight: 800;
+  line-height: 1.375;
+  margin-bottom: 1.6875rem;
+}
+
+.price-box-container {
+  padding: 3.0625rem 1.75rem 2rem;
+  border-radius: 8px;
+  background-color: var(--dark-blue);
+  position: relative;
+  max-width: 20.4375rem;
+  height: 28rem;
+}
+
+.free::before,
+.paid::before {
+  content: "";
+  background-image: url(./assets/icon-free.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 2.875rem;
+  height: 2.875rem;
+  top: -23px;
+  position: absolute;
+}
+
+.price-box__subheading {
+  font-size: var(--fz-heading-m);
+  font-weight: var(--fw-heading-m);
+  line-height: var(--lh-heading-m);
+  margin-bottom: 1.1875rem;
+}
+
+.price-box__para {
+  color: var(--white);
+  opacity: 0.6;
+  margin-bottom: 1.625rem;
+}
+
+.price-box__heading {
+  font-size: 2.5rem;
+  line-height: 1.375;
+  font-weight: 800;
+}
+
+.price-benefits::before {
+  content: "";
+  background-image: url(./assets/icon-check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  position: relative;
+  top: 0.25rem;
+  margin-right: 0.9575rem;
+}
+
+.price-benefits {
+  color: var(--white);
+}
+
+.price-ul {
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.paid {
+  color: var(--very-dark-blue);
+  background-color: var(--light-blue);
+}
+
+.price-box__para--paid {
+  color: var(--very-dark-blue);
+  opacity: 0.6;
+}
+
+.paid::before {
+  background-image: url(./assets/icon-paid.svg);
+  max-width: 3.1875rem;
+  height: 4.0625rem;
+  top: -33px;
+}
+
+.price-benefits--paid {
+  color: var(--very-dark-blue);
+}
+
+.price-benefits--paid::before {
+  background-image: url(./assets/icon-check\ copy.svg);
+}
+
+.price-box__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.46875rem;
+}
+
+.price-box__heading--paid span {
+  opacity: 0.6;
+  font-size: var(--fz-para);
+  font-weight: var(--fw-para);
+  line-height: var(--lh-para);
+}
+
+.footer {
+  margin-bottom: 10.25rem;
+  position: relative;
+}
+
+.footer__heading {
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.3239rem + 0.7512vw, 2rem);
+  line-height: 1.375;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1.9375rem;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer input {
+  width: 100%;
+  border: none;
+  border-radius: 1.5rem;
+  background-color: var(--dark-blue);
+  color: var(--white-opacity);
+  font-size: var(--fz-para);
+  line-height: var(--lh-para);
+  font-weight: 800;
+  padding: 0.75rem 0 0.75rem 1.125rem;
+}
+
+#submit-btn {
+  padding: 0;
+  width: 327px;
+  height: 50px;
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
+  cursor: pointer;
+}
+
+.footer input:focus {
+  outline: none;
+}
+
+.footer::before {
+  content: "";
+  background-image: url(./assets/bg-footer-squiggle.svg);
+  background-size: contain;
+  position: absolute;
+  background-position: center 0;
+  width: 36.5rem;
+  background-repeat: repeat-x;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  z-index: -11;
+}
+
+@media (min-width: 48em) {
+  .header {
+    max-width: 43.125rem;
+    padding: 3rem 0 4.8125rem;
+    margin: 0 auto;
+    justify-content: left;
+  }
+
+  .hero {
+    position: relative;
+    height: 22.25rem;
+    display: grid;
+    place-items: center;
+    margin-bottom: 6.875rem;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero__img {
+    background-image: url(./assets/illustration-hero-left.svg),
+      url(./assets/bg-hero-squiggle.svg),
+      url(./assets/illustration-hero-right.svg);
+    background-size: contain, 24.125rem, contain;
+    background-position: -38% center, center, calc(100vw - 9.125rem) center;
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    height: 22.25rem;
+    position: absolute;
+    z-index: -9;
+    top: 0;
+    left: 0;
+  }
+
+  .hero__txt {
+    max-width: 28.5625rem;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero__heading {
+    font-size: 2rem;
+  }
+
+  .features-container,
+  .price-container {
+    max-width: 35.8125rem;
+  }
+
+  .feature-box {
+    flex-direction: row;
+    max-width: 31.1875rem;
+    text-align: left;
+    gap: 3.4375rem;
+  }
+
+  .feature-img--lifestyle {
+    width: 54%;
+  }
+
+  .feature-img--work {
+    width: 65%;
+  }
+
+  .feature__txt {
+    max-width: 21.25rem;
+  }
+
+  .feature-box:nth-child(2n-1) {
+    justify-self: flex-end;
+  }
+
+  .price-box-container {
+    max-width: 27.8125rem;
+    height: 26.5625rem;
+    padding: 3.0625rem 2.375rem 3rem;
+  }
+
+  .footer {
+    height: 8.75rem;
+    margin-bottom: 6.5625rem;
+    display: grid;
+    place-items: center;
+  }
+
+  .footer-container {
+    max-width: 29.75rem;
+  }
+
+  .email-form {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  #submit-btn {
+    max-width: 140px;
+    height: 48px;
+  }
+
+  .footer::before {
+    width: 100%;
+    height: 100%;
+    background-position: 0 center;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .header,
+  .features-container {
+    max-width: 69.375rem;
+  }
+
+  .header {
+    padding: 5.0625rem 0 9rem;
+  }
+
+  .hero {
+    height: 29.730625rem;
+  }
+
+  .hero__img {
+    background-size: contain, auto, contain;
+    background-position: -6% center, center top, 110% center;
+    height: 29.730625rem;
+  }
+
+  .hero__txt {
+    max-width: 45.5rem;
+    padding: 0 5.8125rem;
+  }
+
+  .hero__heading {
+    font-size: 3rem;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.875rem;
+    height: 23.9375rem;
+    margin-bottom: 12.625rem;
+  }
+
+  .feature-box {
+    flex-direction: column;
+    max-width: 15.9375rem;
+  }
+
+  .feature-box:nth-child(2n-1) {
+    justify-self: auto;
+  }
+
+  .feature-box:nth-child(2n) {
+    align-self: flex-end;
+  }
+
+  .price-container {
+    max-width: 57.5rem;
+    margin-bottom: 9.41375rem;
+  }
+
+  .price-boxes {
+    flex-direction: row;
+    gap: 1.875rem;
+  }
+
+  .price-box-container {
+    max-width: 27.8125rem;
+  }
+
+  .paid {
+    height: 28.0625rem;
+  }
+
+  .footer {
+    height: 14.25rem;
+  }
+
+  .footer::before {
+    background-position: center;
+  }
+
+  .price__txt {
+    max-width: 33.75rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
