@@ -314,7 +314,7 @@ a {
 }
 
 .price-benefits--paid::before {
-  background-image: url(./assets/icon-check copy.svg);
+  background-image: url(./assets/icon-check-copy.svg);
 }
 
 .price-box__heading {
